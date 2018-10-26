@@ -1,14 +1,17 @@
+var something = {};
+
 function whatsTheWeather(day) {
   switch (day.toUpperCase()) {
     case 'MONDAY':
       return '🌞🌻';
+    case 'THORSDAY':
+      return '🔨';
+    case 'TODAY':
+      return '🦄';
     case 'FRIDAY':
       return 'you\'re in love 😻';
     default:
       return '⛈️💩';
   }
 }
-
-exports.shitStorm = '⛈️💩⛈️💩⛈️💩⛈️💩⛈️💩⛈️💩⛈️💩⛈️💩⛈️💩⛈️💩⛈️💩⛈️💩⛈️💩⛈️💩';
-exports.whatsTheWeather = whatsTheWeather;
-// exports;
+module.exports = whatsTheWeather;

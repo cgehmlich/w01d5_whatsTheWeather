@@ -27,7 +27,35 @@ When we require a module `require('./somemodeul')`, we get that module's `export
 
 Everything in a node module is private to that file. The only thing that we can access from another file is that file's `exports` object. If we want to be able to access anything from a module, we can attach it to the `exports` object.
 
+if you're mutating the `exports` object then you can write it like this:
+
+```js
+exports.thing = thing;
+```
+
+or 
+
+```js
+module.exports.thing = thing;
+```
+
+if you're reassigning the `exports` object, then you have to write it like this:
+
+```js
+module.exports = thing;
+```
+
+not:
+
+```js
+exports = thing;
+```
+
 ## npm
+
+* NuGet Package Manager
+
+The default package manager for node. Other people's code.
 
 - package.json 
 - `npm init`
@@ -35,7 +63,7 @@ Everything in a node module is private to that file. The only thing that we can 
 
 ## mocha
 
-
+https://mochajs.org/
 
 ---
 

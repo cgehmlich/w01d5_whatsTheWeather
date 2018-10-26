@@ -1,11 +1,11 @@
 var whatsTheWeather = require('./whatsTheWeather');
-console.log(whatsTheWeather);
-console.log(whatsTheWeather.shitStorm);
-
-// console.log(module);
-
-// console.log(whatsTheWeather('monday'));
-// console.log(whatsTheWeather('funday'));
 
 var day = process.argv[2];
-console.log(whatsTheWeather.whatsTheWeather(day));
+
+var cowsay = require("cowsay");
+
+console.log(cowsay.say({
+	text : whatsTheWeather(day),
+	e : "👀",
+	T : "👅 "
+}));
